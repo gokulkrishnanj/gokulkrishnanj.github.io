@@ -1,25 +1,22 @@
-p {
-    font-weight: 200;
-    color: black;
-}
-
 h1{
-    font-size: 50px;
+    padding: 20px 10px;
+    font-size: 40px;
     margin: auto;
-    border: 2px dotted #333;
 }
 
-.info {
-    color: chocolate;
-    background-color: azure;
-    border: 2px solid black;
-    border-radius: 20px 20px 20px 20px;
-}
-
-.maindiv {
+.header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    flex-direction: row;
+    background-color: #facc15;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.menuNav{
+    font-weight: 200;
+    font-size: 25px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
