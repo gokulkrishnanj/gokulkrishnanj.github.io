@@ -1,0 +1,17 @@
+p {
+    font-weight: 200;
+    color: black;
+}
+
+h1{
+    font-size: 50px;
+    margin: auto;
+    border: 2px dotted #333;
+}
+
+.info {
+    color: chocolate;
+    background-color: azure;
+    border: 2px solid black;
+    border-radius: 20px 20px 20px 20px;
+}
