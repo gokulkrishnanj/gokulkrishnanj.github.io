@@ -44,7 +44,7 @@ body {
 
 .aboutmediv {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-evenly;
     /* gap: 30px; */
     align-items: center;
@@ -54,6 +54,7 @@ body {
 
 
 .profilepic {
+
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -109,7 +110,7 @@ h1, h3{
     border: 2px solid rgb(245, 71, 7);
 }
 
-.footerContactUs img {
+.footerContactUs img, .skillsDiv img {
     border: 1px solid rgb(245, 71, 7);
     border-radius: 50%;
     height: 30px;
