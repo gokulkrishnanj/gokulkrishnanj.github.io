@@ -86,6 +86,7 @@ h1, h3{
     flex-wrap: wrap;
     gap: 20px;
     padding: 10px 0px;
+    color: rgb(146, 146, 146);
 }
 
 .skillsDiv > div {
