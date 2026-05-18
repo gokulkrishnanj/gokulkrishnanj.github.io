@@ -27,6 +27,12 @@
     justify-content: space-evenly;
 }
 
+#about:hover, #experience:hover, #skills:hover, #projects:hover, #contactUs:hover {
+    border-bottom: 2px solid orangered;
+    color: orangered;
+}
+
+
 .portfolio {
     padding-left: 20px;
     font-size: xx-large;
