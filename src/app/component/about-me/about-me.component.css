@@ -34,6 +34,8 @@
 #contactUs:hover {
     border-bottom: 2px solid orangered;
     color: orangered;
+    transition: color 1s ease, border-bottom 0.5s ease;
+    cursor: pointer;
 }
 
 .portfolio {
@@ -110,3 +112,24 @@
     display: flex;
     gap: 5px;
 }
+
+.social-media-container{
+    display: flex;
+    gap: 20px;
+}
+
+
+.social-media-container img {
+    margin-top: 30px;
+    height: 60px;
+    border: 1px solid #7b7a7a;
+    border-radius: 20px;
+}
+
+.social-media-container img:hover {
+    border: 1px solid orangered;
+    cursor: pointer;
+    transition: border 1s ease;
+
+}
+

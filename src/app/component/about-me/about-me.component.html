@@ -39,6 +39,18 @@
                 <button type="button" class="button" (click)="downloadDocument()">Download CV</button>
             </div>
             <div class="social-media-container">
+                <a *ngIf="githubURL" href="{{githubURL}}" target="_blank">
+                    <img src="assets/githublogo.jpg" alt="Github">
+                </a>
+                <a *ngIf="linkedInURL" href="{{linkedInURL}}" target="_blank">
+                    <img src="assets/linkedinlogo.jpg" alt="LinkedIn">
+                </a>
+                <a *ngIf="phoneNo" href="tel:{{phoneNo}}">
+                    <img src="assets/phonelogo.jpg" alt="Phone">
+                </a>
+                <a *ngIf="mailId" href="mailTo:{{mailId}}">
+                    <img src="assets/maillogo.jpg" alt="Mail">
+                </a>
             </div>
         </div>
         <div class="homeImage">

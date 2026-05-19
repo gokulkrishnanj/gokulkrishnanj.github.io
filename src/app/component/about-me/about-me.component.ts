@@ -7,12 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
+  public phoneNo: string='';
+  public mailId: string='';
+  public githubURL:string='';
+  public linkedInURL:string='';
+
   constructor() { }
+
 
   private docURL: string = 'https://drive.google.com/file/d/1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1/view';
   private docLink: string='https://drive.google.com/uc?export=download&id=1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1'
 
   ngOnInit(): void {
+    this.phoneNo='+91 6382781047';
+    this.mailId='gokulkrishnanj27@gmail.com'
+    this.githubURL='https://github.com/gokulkrishnanj';
+    this.linkedInURL='https://www.linkedin.com/in/jgokulkrishnan/'
   }
 
   public previewPDF() {
