@@ -16,6 +16,11 @@
     font-family: poppins;
 }
 
+.home-header:hover {
+    border: 1px solid orangered;
+    transition: border 2s ease;
+}
+
 #spandot {
     color: orangered;
 }
