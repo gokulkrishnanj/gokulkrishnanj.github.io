@@ -11,7 +11,7 @@
             <div id="contactUs">Contact Us</div>
         </div>
         <div class="hire-me-button-container">
-            <button id="hireMe" type="submit">Hire Me !</button>
+            <button class="button" type="submit">Hire Me !</button>
         </div>
     </div>
     <div class="body">
@@ -29,8 +29,16 @@
             </div>
             <div class="profile-summary-container">
                 <p id="profile-summary">
-                    Software Engineer skilled in Java, Spring Boot, Kafka, SQL, and NoSQL databases. Familiar with frontend technologies like HTML, CSS, JavaScript, and Angular. Passionate about building scalable applications, clean architecture, and efficient software solutions.
+                    Software Engineer skilled in Java, Spring Boot, Kafka, SQL, and NoSQL databases. Familiar with
+                    frontend technologies like HTML, CSS, JavaScript, and Angular. Passionate about building scalable
+                    applications, clean architecture, and efficient software solutions.
                 </p>
+            </div>
+            <div class="download-preview-button-container">
+                <button type="button" class="button" (click)="previewPDF()">Preview CV</button>
+                <button type="button" class="button" (click)="downloadDocument()">Download CV</button>
+            </div>
+            <div class="social-media-container">
             </div>
         </div>
         <div class="homeImage">

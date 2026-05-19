@@ -43,7 +43,7 @@
     font-weight: bold;
 }
 
-#hireMe {
+.button {
     display: flex;
     align-items: center;
     padding-right: 20px;
@@ -104,4 +104,9 @@
     font-weight: lighter;
     margin: 60px 0px 0px 8px;
     font-weight: 100;
+}
+
+.download-preview-button-container{
+    display: flex;
+    gap: 5px;
 }
