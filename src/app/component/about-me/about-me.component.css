@@ -138,3 +138,22 @@
 
 }
 
+.homeImage img{
+    width: 900px;
+}
+
+/* .body{
+    position: sticky;
+    top: 400px;
+} */
+
+.about-me-container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    gap: 20px;
+}
+
+.homeImage{
+    margin-right: 80px;
+}
