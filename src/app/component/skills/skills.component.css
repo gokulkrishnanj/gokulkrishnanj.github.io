@@ -1,0 +1,15 @@
+.main{
+    color: #fff;
+    font-family: poppins;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.skill-container{
+    height: 500px;
+    width: 1000px;
+    border: 2px solid orangered;
+
+}
