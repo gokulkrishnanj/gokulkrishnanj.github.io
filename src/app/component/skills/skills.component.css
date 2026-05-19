@@ -1,15 +1,28 @@
-.main{
+.main {
     color: #fff;
     font-family: poppins;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
-.skill-container{
-    height: 500px;
-    width: 1000px;
-    border: 2px solid orangered;
+.skill-container {
+    height: 600px;
+    width: 1200px;
+    border: 1px solid #7b7a7a;
+    border-radius: 10px;
+}
 
+.skill-container:hover {
+    border: 1px solid orangered;
+    transition: 1s;
+}
+
+#skill-heading-container {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0px;
 }
