@@ -13,6 +13,7 @@ export class SkillsComponent implements OnInit {
   public currentIndex: number = 0;
   public skillDetailContainerWidth: number = 110; // Adjust this value based on your CSS
 
+
   public skills: Skills[] = [
     { skillName: 'Java', skillImage: 'assets/javalogo.jpg' },
     { skillName: 'Springboot', skillImage: 'assets/springbootlogo.jpg' },

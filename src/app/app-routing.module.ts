@@ -15,6 +15,18 @@ const routes: Routes = [
   {
     path: 'skills',
     component: SkillsComponent
+  },
+  {
+    path: 'projects',
+    component: SkillsComponent
+  },
+  {
+    path: 'experience',
+    component: SkillsComponent
+  },
+  {
+    path: 'contact-us',
+    component: SkillsComponent
   }
 ];
 

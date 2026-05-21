@@ -4,11 +4,11 @@
             Portfolio<span id="spandot">.</span>
         </div>
         <div class="headerItems">
-            <div id="about">About</div>
-            <div id="experience">Experience</div>
-            <div id="skills">Skills</div>
-            <div id="projects">Projects</div>
-            <div id="contactUs">Contact Us</div>
+            <div id="about" (click)="navigateOnClick('about-me')">About</div>
+            <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
+            <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
+            <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
+            <div id="contactUs" (click)="navigateOnClick('contact-us')">Contact Us</div>
         </div>
         <div class="hire-me-button-container">
             <button class="button" type="submit">Hire Me !</button>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-about-me',
@@ -7,22 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutMeComponent implements OnInit {
 
-  public phoneNo: string='';
-  public mailId: string='';
-  public githubURL:string='';
-  public linkedInURL:string='';
+  public phoneNo: string = '';
+  public mailId: string = '';
+  public githubURL: string = '';
+  public linkedInURL: string = '';
+  public routeObject: Record<string, string> = {};
 
-  constructor() { }
+  constructor(private router: Router) { }
 
 
   private docURL: string = 'https://drive.google.com/file/d/1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1/view';
-  private docLink: string='https://drive.google.com/uc?export=download&id=1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1'
+  private docLink: string = 'https://drive.google.com/uc?export=download&id=1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1'
 
   ngOnInit(): void {
-    this.phoneNo='+91 6382781047';
-    this.mailId='gokulkrishnanj27@gmail.com'
-    this.githubURL='https://github.com/gokulkrishnanj';
-    this.linkedInURL='https://www.linkedin.com/in/jgokulkrishnan/'
+    this.phoneNo = '+91 6382781047';
+    this.mailId = 'gokulkrishnanj27@gmail.com'
+    this.githubURL = 'https://github.com/gokulkrishnanj';
+    this.linkedInURL = 'https://www.linkedin.com/in/jgokulkrishnan/'
+    this.routeObject = { 'about-me': '/', 'skills': '/skills', 'projects': '/projects', 'contact-us': '/contact-us', 'experience': '/experience' }
   }
 
   public previewPDF() {
@@ -35,5 +38,15 @@ export class AboutMeComponent implements OnInit {
     link.download = 'Gokul_Resume.pdf';
     link.click();
   }
+
+  public navigateOnClick(route: string): void {
+    const targetRoute = this.routeObject[route];
+    if (targetRoute) {
+      this.router.navigate([targetRoute]);
+    } else {
+      console.error(`No route found for ${route}`);
+    }
+  }
+
 
 }
