@@ -1,10 +1,23 @@
 <div class="main">
     <div class="footer" style="height: 30px;">
-        aduj
     </div>
     <div class="skill-container">
         <h1 id="skill-heading-container">Skills.</h1>
-        <div class="skill-detail-container" >
+        <div class="skill-list">
+            <div class="skill-detail-container" *ngFor="let skill of skills">
+                <div class="skill-image-name-container">
+                    <img [src]="skill.skillImage" [alt]="skill.skillName" class="skill-image">
+                    <div>{{ skill.skillName }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-button-container">
+            <div class="left-button-container">
+                <button class="nav-button">←</button>
+            </div>
+            <div class="right-button-container">
+                <button class="nav-button">→</button>
+            </div>
         </div>
     </div>
 </div>
