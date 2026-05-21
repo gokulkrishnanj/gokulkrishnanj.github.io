@@ -10,7 +10,10 @@ export class SkillsComponent implements OnInit {
 
   constructor() { }
 
-  skills: Skills[] = [
+  public currentIndex: number = 0;
+  public skillDetailContainerWidth: number = 110; // Adjust this value based on your CSS
+
+  public skills: Skills[] = [
     { skillName: 'Java', skillImage: 'assets/javalogo.jpg' },
     { skillName: 'Springboot', skillImage: 'assets/springbootlogo.jpg' },
     { skillName: 'HTML', skillImage: 'assets/htmllogo.jpg' },
@@ -27,4 +30,13 @@ export class SkillsComponent implements OnInit {
 
   }
 
+  public updateIndex(a: string): void {
+    console.log(this.currentIndex+" "+a);
+    if (this.currentIndex > 0 && a === 'prev') {
+      this.currentIndex--;
+    }
+    if (this.currentIndex < this.skills.length - 1 && a === 'next') {
+      this.currentIndex++;
+    }
+  }
 }

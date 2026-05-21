@@ -1,8 +1,9 @@
 <div class="main">
     <div class="skill-container">
         <h1 id="skill-heading-container">Skills.</h1>
-        <div class="skill-list">
-            <div class="skill-detail-container" *ngFor="let skill of skills">
+        <div class="skill-list" [style.transform]="'translateX(-' + (currentIndex * skillDetailContainerWidth) + 'px)'">
+            <div class="skill-detail-container" *ngFor="let skill of skills;let i = index"
+                [class.active]="i === currentIndex">
                 <div class="skill-image-name-container">
                     <img [src]="skill.skillImage" [alt]="skill.skillName" class="skill-image">
                     <div id="skill-name-container">{{ skill.skillName }}</div>
@@ -10,12 +11,13 @@
             </div>
         </div>
         <div class="nav-button-container">
-            <button mat-icon-button aria-label="Previous">
+            <button mat-icon-button aria-label="Previous" (click)="updateIndex('prev')" [disabled]="currentIndex===0">
                 <mat-icon>chevron_left</mat-icon>
             </button>
 
             <!-- Right Arrow Button -->
-            <button mat-icon-button aria-label="Next">
+            <button mat-icon-button aria-label="Next" (click)="updateIndex('next')"
+                [disabled]="currentIndex===skills.length-1">
                 <mat-icon>chevron_right</mat-icon>
             </button>
         </div>
