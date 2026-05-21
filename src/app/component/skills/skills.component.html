@@ -1,12 +1,14 @@
 <div class="main">
     <div class="skill-container">
         <h1 id="skill-heading-container">Skills.</h1>
-        <div class="skill-list" [style.transform]="'translateX(-' + (currentIndex * skillDetailContainerWidth) + 'px)'">
-            <div class="skill-detail-container" *ngFor="let skill of skills;let i = index"
-                [class.active]="i === currentIndex">
-                <div class="skill-image-name-container">
-                    <img [src]="skill.skillImage" [alt]="skill.skillName" class="skill-image">
-                    <div id="skill-name-container">{{ skill.skillName }}</div>
+        <div class="skill-list-wrapper">
+            <div class="skill-list" [style.transform]="'translateX(-' + (currentIndex * skillDetailContainerWidth) + 'px)'">
+                <div class="skill-detail-container" *ngFor="let skill of skills;let i = index"
+                    [class.active]="i === currentIndex">
+                    <div class="skill-image-name-container">
+                        <img [src]="skill.skillImage" [alt]="skill.skillName" class="skill-image">
+                        <div id="skill-name-container">{{ skill.skillName }}</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,6 +23,9 @@
                 <mat-icon>chevron_right</mat-icon>
             </button>
         </div>
+        <!-- <div class="total-skills-container">
+            <span>{{currentIndex+1}}/</span><span>{{skills.length}}</span>
+        </div> -->
     </div>
     <div class="footer-button-container">
         <button mat-icon-button>

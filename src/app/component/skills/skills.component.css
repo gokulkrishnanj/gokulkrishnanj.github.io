@@ -30,14 +30,19 @@
     transition: 1s;
 }
 
+.skill-list-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 .skill-list {
     display: flex;
     flex-direction: row;
     /* flex-wrap: wrap; */
-    justify-content: center;
+    justify-content: flex-start;
     gap: 70px;
-    width: 100%;
     transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+    min-width: max-content;
 }
 
 .skill-detail-container {

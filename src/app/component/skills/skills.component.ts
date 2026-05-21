@@ -11,7 +11,7 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   public currentIndex: number = 0;
-  public skillDetailContainerWidth: number = 110; // Adjust this value based on your CSS
+  public skillDetailContainerWidth: number = 180; // card width + gap (110 + 70)
 
 
   public skills: Skills[] = [
