@@ -11,10 +11,16 @@ export class SkillsComponent implements OnInit {
   constructor() { }
 
   skills: Skills[] = [
-    { skillName: 'Github', skillImage: 'assets/githublogo.jpg' },
-    { skillName: 'TypeScript', skillImage: 'assets/' },
-    { skillName: 'HTML', skillImage: 'assets/html-logo.png' },
-    { skillName: 'CSS', skillImage: 'assets/css-logo.png' }
+    { skillName: 'Java', skillImage: 'assets/javalogo.jpg' },
+    { skillName: 'Springboot', skillImage: 'assets/springbootlogo.jpg' },
+    { skillName: 'HTML', skillImage: 'assets/htmllogo.jpg' },
+    { skillName: 'CSS', skillImage: 'assets/csslogo.jpg' },
+    { skillName: 'JavaScript', skillImage: 'assets/javascriptlogo.jpg' },
+    { skillName: 'Angular', skillImage: 'assets/angularlogo.jpg' },
+    { skillName: 'Git', skillImage: 'assets/gitlogo.jpg' },
+    { skillName: 'SQL', skillImage: 'assets/sqllogo.jpg' },
+    { skillName: 'MongoDB', skillImage: 'assets/mongodblogo.jpg' },
+    { skillName: 'AWS', skillImage: 'assets/awslogo.jpg' }
   ];
 
   ngOnInit(): void {

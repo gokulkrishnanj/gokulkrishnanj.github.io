@@ -7,17 +7,19 @@
             <div class="skill-detail-container" *ngFor="let skill of skills">
                 <div class="skill-image-name-container">
                     <img [src]="skill.skillImage" [alt]="skill.skillName" class="skill-image">
-                    <div>{{ skill.skillName }}</div>
+                    <div id="skill-name-container">{{ skill.skillName }}</div>
                 </div>
             </div>
         </div>
         <div class="nav-button-container">
-            <div class="left-button-container">
-                <button class="nav-button">←</button>
-            </div>
-            <div class="right-button-container">
-                <button class="nav-button">→</button>
-            </div>
+            <button mat-icon-button aria-label="Previous">
+                <mat-icon>chevron_left</mat-icon>
+            </button>
+
+            <!-- Right Arrow Button -->
+            <button mat-icon-button aria-label="Next">
+                <mat-icon>chevron_right</mat-icon>
+            </button>
         </div>
     </div>
 </div>

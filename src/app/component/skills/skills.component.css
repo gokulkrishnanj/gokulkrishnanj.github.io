@@ -28,7 +28,7 @@
 .skill-list {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 70px;
     width: 100%;
@@ -56,8 +56,8 @@
 
 .skill-image-name-container img{
     border: 1px solid #7b7a7a;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     border-radius: 50px;
 }
 
@@ -76,12 +76,21 @@
     gap: 30px;
 }
 
-.nav-button {
-    background-color: transparent;
+.nav-button-container button{
     border: 1px solid #7b7a7a;
-    color: #fff;
-    font-size: 30px;
-    padding: 10px 10px;
-    border-radius: 50%;
-    cursor: pointer;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    /* background-color:; */
+}
+
+.nav-button-container button:hover{
+    border: 2px solid orangered;
+    transition: 1s;
+    color: orangered;
+}
+
+#skill-name-container{
+    font-size: 18px;
+    font-weight: bold;
 }
