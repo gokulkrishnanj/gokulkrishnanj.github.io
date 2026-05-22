@@ -24,7 +24,10 @@ export class SkillsComponent implements OnInit {
     { skillName: 'Git', skillImage: 'assets/gitlogo.jpg' },
     { skillName: 'SQL', skillImage: 'assets/sqllogo.jpg' },
     { skillName: 'MongoDB', skillImage: 'assets/mongodblogo.jpg' },
-    { skillName: 'AWS', skillImage: 'assets/awslogo.jpg' }
+    { skillName: 'AWS', skillImage: 'assets/awslogo.jpg' },
+    { skillName: 'Kafka', skillImage: 'assets/kafkalogo.jpg' },
+    { skillName: 'Redis', skillImage: 'assets/redislogo.jpg' },
+    { skillName: 'Python', skillImage: 'assets/pythonlogo.jpg' }
   ];
 
   ngOnInit(): void {
@@ -32,7 +35,7 @@ export class SkillsComponent implements OnInit {
   }
 
   public updateIndex(a: string): void {
-    console.log(this.currentIndex+" "+a);
+    console.log(this.currentIndex + " " + a);
     if (this.currentIndex > 0 && a === 'prev') {
       this.currentIndex--;
     }
