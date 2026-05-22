@@ -7,12 +7,14 @@ import { AboutMeComponent } from './component/about-me/about-me.component';
 import { SkillsComponent } from './component/skills/skills.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
+import { ContactUsComponent } from './component/contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

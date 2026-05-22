@@ -1,4 +1,9 @@
 <div class="about-me">
+    <div class="contact-us-container hire-now-container" *ngIf="isFormClicked">
+        <form class="contact-us-from hire-now-form">
+            <label id="name">Name</label><br>
+        </form>
+    </div>
     <div class="home-header">
         <div class="portfolio">
             Portfolio<span id="spandot">.</span>
@@ -8,7 +13,7 @@
             <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
             <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
             <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
-            <div id="contactUs" (click)="navigateOnClick('contact-us')">Contact Us</div>
+            <div id="contactUs" >Contact Us</div>
         </div>
         <div class="hire-me-button-container">
             <button class="button" type="submit">Hire Me !</button>

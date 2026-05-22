@@ -13,6 +13,7 @@ export class AboutMeComponent implements OnInit {
   public githubURL: string = '';
   public linkedInURL: string = '';
   public routeObject: Record<string, string> = {};
+  public isFormClicked:boolean=false;
 
   constructor(private router: Router) { }
 
@@ -25,7 +26,7 @@ export class AboutMeComponent implements OnInit {
     this.mailId = 'gokulkrishnanj27@gmail.com'
     this.githubURL = 'https://github.com/gokulkrishnanj';
     this.linkedInURL = 'https://www.linkedin.com/in/jgokulkrishnan/'
-    this.routeObject = { 'about-me': '/', 'skills': '/skills', 'projects': '/projects', 'contact-us': '/contact-us', 'experience': '/experience' }
+    this.routeObject = { 'about-me': '/', 'skills': '/skills', 'projects': '/projects', 'experience': '/experience' }
   }
 
   public previewPDF() {
@@ -48,5 +49,12 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
+  public openForm(){
+    this.isFormClicked=true;
+  }
+
+  public closeForm(){
+    this.isFormClicked=false;
+  }
 
 }
