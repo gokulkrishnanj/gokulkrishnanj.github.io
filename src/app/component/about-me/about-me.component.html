@@ -1,28 +1,35 @@
-<div class="about-me">
+<div *ngIf="isContactUsClicked" class="contact-us-social-media-container">
+    <div class="close-button-container">
+        <button mat-icon-button aria-label="Close dialog" (click)="closeContactMe()">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+    <div class="contact-details-container">
+        <a *ngIf="githubURL" href="{{githubURL}}" target="_blank">
+            <img src="assets/githublogo.jpg" alt="Github">
+        </a>
+        <a *ngIf="linkedInURL" href="{{linkedInURL}}" target="_blank">
+            <img src="assets/linkedinlogo.jpg" alt="LinkedIn">
+        </a>
+        <a *ngIf="phoneNo" href="tel:{{phoneNo}}">
+            <img src="assets/phonelogo.jpg" alt="Phone">
+        </a>
+        <a *ngIf="mailId" href="mailTo:{{mailId}}">
+            <img src="assets/maillogo.jpg" alt="Mail">
+        </a>
+    </div>
+</div>
+<div class="about-me" [ngClass]="{'blur-background': isContactUsClicked}">
     <div class="home-header">
         <div class="portfolio">
             Portfolio<span id="spandot">.</span>
         </div>
-        <div *ngIf="isContactUsClicked" class="contact-us-social-media-container">
-                <a *ngIf="githubURL" href="{{githubURL}}" target="_blank">
-                    <img src="assets/githublogo.jpg" alt="Github">
-                </a>
-                <a *ngIf="linkedInURL" href="{{linkedInURL}}" target="_blank">
-                    <img src="assets/linkedinlogo.jpg" alt="LinkedIn">
-                </a>
-                <a *ngIf="phoneNo" href="tel:{{phoneNo}}">
-                    <img src="assets/phonelogo.jpg" alt="Phone">
-                </a>
-                <a *ngIf="mailId" href="mailTo:{{mailId}}">
-                    <img src="assets/maillogo.jpg" alt="Mail">
-                </a>
-            </div>
         <div class="headerItems">
             <div id="about" (click)="navigateOnClick('about-me')">About</div>
             <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
             <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
             <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
-            <div id="contactUs">Contact Me</div>
+            <div id="contactUs" (click)="openContactMe()">Contact Me</div>
         </div>
         <div class="hire-me-button-container">
             <button class="button" type="submit">Hire Me !</button>

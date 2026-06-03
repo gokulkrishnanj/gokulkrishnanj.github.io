@@ -49,12 +49,11 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
-  public openContactUs(){
+  public openContactMe(){
     this.isContactUsClicked= true;
-    console.log('isContactUsClicked: ',this.isContactUsClicked)
   }
 
-  public closeContactUs(){
+  public closeContactMe(){
     this.isContactUsClicked=false;
   }
 
