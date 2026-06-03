@@ -1,40 +1,22 @@
 <div class="about-me">
-    <div class="contact-hire-container" *ngIf="isFormClicked">
-        <form class="contact-hire-from-container">
-            <div class="form-header-container">
-                <div class="header-content-container">
-                    <h2>Contact Me!</h2>
-                    <p>Fill the form and I'll get back to you.</p>
-                </div>
-                <div class="form-close-button-container"> <button mat-icon-button>
-                        <mat-icon>close</mat-icon>
-                    </button>
-                </div>
-            </div>
-            <div class="form-body-container">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <label for="contactNumber">Contact Number</label>
-                <input type="text" id="contactNumber" name="contactNumber"><br>
-                <label for="subject">Subject</label><br>
-                <input type="text" id="subject" name="subject"><br>
-                <label for="message">Message</label><br>
-                <input type="text" id="message" name="message">
-            </div>
-            <div class="form-footer-container">
-                <div class="cancel-div-container">
-                    Cancel
-                </div>
-                <div class="send-message-container">
-                    Send Message
-                </div>
-            </div>
-        </form>
-    </div>
     <div class="home-header">
         <div class="portfolio">
             Portfolio<span id="spandot">.</span>
         </div>
+        <div *ngIf="isContactUsClicked" class="contact-us-social-media-container">
+                <a *ngIf="githubURL" href="{{githubURL}}" target="_blank">
+                    <img src="assets/githublogo.jpg" alt="Github">
+                </a>
+                <a *ngIf="linkedInURL" href="{{linkedInURL}}" target="_blank">
+                    <img src="assets/linkedinlogo.jpg" alt="LinkedIn">
+                </a>
+                <a *ngIf="phoneNo" href="tel:{{phoneNo}}">
+                    <img src="assets/phonelogo.jpg" alt="Phone">
+                </a>
+                <a *ngIf="mailId" href="mailTo:{{mailId}}">
+                    <img src="assets/maillogo.jpg" alt="Mail">
+                </a>
+            </div>
         <div class="headerItems">
             <div id="about" (click)="navigateOnClick('about-me')">About</div>
             <div id="experience" (click)="navigateOnClick('experience')">Experience</div>

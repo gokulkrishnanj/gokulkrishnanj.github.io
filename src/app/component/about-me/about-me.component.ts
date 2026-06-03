@@ -13,7 +13,7 @@ export class AboutMeComponent implements OnInit {
   public githubURL: string = '';
   public linkedInURL: string = '';
   public routeObject: Record<string, string> = {};
-  public isFormClicked:boolean=false;
+  public isContactUsClicked:boolean=false;
 
   constructor(private router: Router) { }
 
@@ -49,12 +49,13 @@ export class AboutMeComponent implements OnInit {
     }
   }
 
-  public openForm(){
-    this.isFormClicked=true;
+  public openContactUs(){
+    this.isContactUsClicked= true;
+    console.log('isContactUsClicked: ',this.isContactUsClicked)
   }
 
-  public closeForm(){
-    this.isFormClicked=false;
+  public closeContactUs(){
+    this.isContactUsClicked=false;
   }
 
 }

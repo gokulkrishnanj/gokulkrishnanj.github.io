@@ -191,10 +191,8 @@
     border: 2px solid orangered;
 }
 
-.contact-hire-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    z-index: 10000;
+.contact-us-social-media-container{
+    border: 2px solid orangered;
+    height: 50px;
+    width: 50px;
 }
