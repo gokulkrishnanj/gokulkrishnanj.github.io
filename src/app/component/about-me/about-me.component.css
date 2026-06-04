@@ -170,7 +170,8 @@
     /* justify-content: space-evenly; */
     border-bottom: 2px solid #7b7a7a;
 }
-.form-close-button-container button{
+
+.form-close-button-container button {
     border-radius: 30%;
 }
 
@@ -190,7 +191,7 @@
     border: 2px solid orangered;
 }
 
-.contact-us-social-media-container{
+.contact-us-social-media-container {
     position: absolute;
     top: 150px;
     left: 50%;
@@ -223,7 +224,8 @@
 
 .close-button-container {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .close-button-container button {
@@ -241,6 +243,19 @@
 
 
 .blur-background {
-  filter: blur(5px); 
-  pointer-events: none;
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.contact-me-heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: orangered;
+    padding-bottom: 10px;
+    border-bottom: 2px solid orangered; 
+    /* border-radius: 5%;  */
+}
+
+.contact-me-heading-loader-class {
+    transition: border-bottom 2s ease;
 }
