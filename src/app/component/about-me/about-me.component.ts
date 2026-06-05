@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-about-me',
@@ -14,14 +15,30 @@ export class AboutMeComponent implements OnInit {
   public linkedInURL: string = '';
   public routeObject: Record<string, string> = {};
   public isContactUsClicked:boolean=false;
+  public isMobileView:boolean=false;
+  public isHomeImageDisplayed:boolean=false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private breakPointObserver: BreakpointObserver
+  ) { }
 
 
   private docURL: string = 'https://drive.google.com/file/d/1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1/view';
   private docLink: string = 'https://drive.google.com/uc?export=download&id=1C0ZpYZc4_OJh7o5sL_Zp28Ja4EWI6RU1'
 
   ngOnInit(): void {
+        this.breakPointObserver
+      .observe(['(max-width: 1000px)'])
+      .subscribe(result => {
+        this.isHomeImageDisplayed = !result.matches;
+      });
+
+      this.breakPointObserver
+      .observe(['(min-width: 700px)'])
+      .subscribe(result=> {
+        this.isMobileView = !result.matches;
+      });
+
     this.phoneNo = '+91 6382781047';
     this.mailId = 'gokulkrishnanj27@gmail.com'
     this.githubURL = 'https://github.com/gokulkrishnanj';

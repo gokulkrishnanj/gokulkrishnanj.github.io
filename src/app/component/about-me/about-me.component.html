@@ -21,18 +21,27 @@
     </div>
 </div>
 <div class="about-me" [ngClass]="{'blur-background': isContactUsClicked}">
-    <div class="home-header">
+    <div class="home-header" [ngClass]="{'home-header-mobile':isMobileView}">
         <div class="portfolio">
             Portfolio<span id="spandot">.</span>
         </div>
-        <div class="headerItems">
-            <div id="about" (click)="navigateOnClick('about-me')">About</div>
-            <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
-            <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
-            <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
-            <div id="contactUs" (click)="openContactMe()">Contact Me</div>
+
+        <div *ngIf="isMobileView; else headerDisplay" class="hamburger-container">
+            <button mat-icon-button aria-label="Toggle navigation menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+
         </div>
-        <div class="hire-me-button-container">
+        <ng-template #headerDisplay>
+            <div class="headerItems">
+                <div id="about" (click)="navigateOnClick('about-me')">About</div>
+                <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
+                <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
+                <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
+                <div id="contactUs" (click)="openContactMe()">Contact Me</div>
+            </div>
+        </ng-template>
+        <div *ngIf="!isMobileView" class="hire-me-button-container">
             <button class="button" type="submit">Hire Me !</button>
         </div>
     </div>
@@ -77,7 +86,7 @@
                 </a>
             </div>
         </div>
-        <div class="homeImage">
+        <div *ngIf="isHomeImageDisplayed" class="homeImage">
             <img src="assets/homeImage.png" alt="homeImage">
         </div>
     </div>

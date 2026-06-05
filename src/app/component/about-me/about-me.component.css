@@ -16,6 +16,10 @@
     font-family: poppins;
 }
 
+.home-header-mobile{
+    border:  1px solid orangered;
+}
+
 .home-header:hover {
     border: 1px solid orangered;
     transition: border 2s ease;
@@ -28,6 +32,7 @@
 .headerItems {
     padding-top: 10px;
     display: flex;
+    flex-wrap: wrap;
     gap: 70px;
     justify-content: space-evenly;
 }
@@ -252,10 +257,21 @@
     font-weight: bold;
     color: orangered;
     padding-bottom: 10px;
-    border-bottom: 2px solid orangered; 
+    border-bottom: 2px solid orangered;
     /* border-radius: 5%;  */
 }
 
 .contact-me-heading-loader-class {
     transition: border-bottom 2s ease;
+}
+
+.hamburger-container button{
+    background-color: #000;
+    border: 2px solid orangered;
+    border-radius: 10px;
+}
+
+.hamburger-container mat-icon{
+    background-color: #000;
+    color: orangered;
 }
