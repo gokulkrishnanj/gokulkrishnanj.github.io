@@ -17,6 +17,7 @@ export class AboutMeComponent implements OnInit {
   public isContactUsClicked:boolean=false;
   public isMobileView:boolean=false;
   public isHomeImageDisplayed:boolean=false;
+  public isHamburgerMenuClicked:boolean=false;
 
   constructor(private router: Router,
     private breakPointObserver: BreakpointObserver

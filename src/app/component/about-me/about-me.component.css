@@ -92,7 +92,7 @@
 .body {
     display: flex;
     margin-left: 70px;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 
 .body-mobile {
