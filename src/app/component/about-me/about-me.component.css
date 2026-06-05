@@ -16,8 +16,8 @@
     font-family: poppins;
 }
 
-.home-header-mobile{
-    border:  1px solid orangered;
+.home-header-mobile {
+    border: 1px solid orangered;
 }
 
 .home-header:hover {
@@ -92,6 +92,11 @@
 .body {
     display: flex;
     margin-left: 70px;
+    flex-wrap: wrap;
+}
+
+.body-mobile {
+    margin-left: 0px;
 }
 
 .name-container {
@@ -265,13 +270,13 @@
     transition: border-bottom 2s ease;
 }
 
-.hamburger-container button{
+.hamburger-container button {
     background-color: #000;
     border: 2px solid orangered;
     border-radius: 10px;
 }
 
-.hamburger-container mat-icon{
+.hamburger-container mat-icon {
     background-color: #000;
     color: orangered;
 }
