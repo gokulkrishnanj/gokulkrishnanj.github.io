@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Skills } from '../../models/Skills';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-skills',
@@ -8,11 +9,11 @@ import { Skills } from '../../models/Skills';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   public currentIndex: number = 0;
   public skillDetailContainerWidth: number = 180; // card width + gap (110 + 70)
-
+  public isMobileView: boolean = false; // Adjust the breakpoint as needed
 
   public skills: Skills[] = [
     { skillName: 'Java', skillImage: 'assets/javalogo.jpg' },
@@ -31,7 +32,11 @@ export class SkillsComponent implements OnInit {
   ];
 
   ngOnInit(): void {
-
+    this.breakpointObserver
+      .observe(['(max-width: 700px)'])
+      .subscribe(result => {
+        this.isMobileView = !result.matches;
+      });
   }
 
   public updateIndex(a: string): void {
