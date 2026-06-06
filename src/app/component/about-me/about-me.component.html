@@ -42,7 +42,7 @@
             </div>
         </ng-template>
 
-                <div class="hamburger-menu-container" *ngIf="isHamburgerMenuClicked && isMobileView">
+        <div class="hamburger-menu-container" *ngIf="isHamburgerMenuClicked && isMobileView">
             <div class="navigation-header-container">
                 <div class="portfolio">
                     Portfolio<span id="spandot">.</span>
@@ -52,14 +52,24 @@
                 </button>
             </div>
             <div class="hamburger-menu">
-                <div id="about" (click)="navigateOnClick('about-me')">About</div>
-                <div id="experience" (click)="navigateOnClick('experience')">Experience</div>
-                <div id="skills" (click)="navigateOnClick('skills')">Skills</div>
-                <div id="projects" (click)="navigateOnClick('projects')">Projects</div>
-                <div id="contactUs" (click)="openContactMe()">Contact Me</div>
+                <div id="about" (click)="navigateOnClick('about-me')">
+                    <i class="ti ti-user"></i> About
+                </div>
+                <div id="experience" (click)="navigateOnClick('experience')">
+                    <i class="ti ti-briefcase"></i> Experience
+                </div>
+                <div id="skills" (click)="navigateOnClick('skills')">
+                    <i class="ti ti-tool"></i> Skills
+                </div>
+                <div id="projects" (click)="navigateOnClick('projects')">
+                    <i class="ti ti-layout-grid"></i> Projects
+                </div>
+                <div id="contactUs" (click)="openContactMe()">
+                    <i class="ti ti-mail"></i> Contact Me
+                </div>
             </div>
         </div>
-        
+
         <div *ngIf="!isMobileView" class="hire-me-button-container">
             <button class="button" type="submit">Hire Me !</button>
         </div>
