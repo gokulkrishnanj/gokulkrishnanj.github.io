@@ -217,6 +217,9 @@
 .contact-details-container {
     display: flex;
     margin-top: 35px;
+    border: 1px solid #7b7a7a;
+    border-radius: 20px;
+    padding: 10px;
 }
 
 .contact-details-container img {
